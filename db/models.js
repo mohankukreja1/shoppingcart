@@ -1,6 +1,6 @@
 const sequelize=require('sequelize');
 const datatypes=sequelize.DataTypes;
-
+let count=0;
 const db=new sequelize('dbone','userone','passone',{
     host: 'localhost',
     dialect: 'mysql'

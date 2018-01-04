@@ -7,14 +7,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="{{images}}" alt="Card image cap" >
-    <div class="card-body">
-        <h5 class="card-title">{{title}}</h5>
-        <p class="card-text">{{price}}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+
+{{#each card as |card|}}
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{card.dataValues.image}}" >
+        <div class="card-body">
+            <h5 class="card-title">{{card.dataValues.title}}</h5>
+            <p class="card-text">{{card.dataValues.price}}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
     </div>
-</div>
+
+{{/each}}
 
 
 

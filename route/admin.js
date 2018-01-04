@@ -25,8 +25,12 @@ route.post('/',(req,res)=>{
             price:req.body.price,
             image:`images/${req.file.filename}`
 
+        }).then(()=>{
+
+        }).catch((err)=>{
+            console.log(err);
         })
-        res.redirect('/catlog');
+        res.redirect('/');
         // Everything went fine
     })
 })
