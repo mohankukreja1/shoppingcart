@@ -8,22 +8,22 @@
 
 </head>
 <body>
-<button id="hello">hello</button>
 <form action="/add" method=POST enctype="multipart/form-data">
+    <fieldset>
+        <legend>Add item</legend>
+        <div class="custom-file" style="width: 300px;">
+            <input type="file" class="custom-file-input" id="customFile">
+            <label class="custom-file-label" for="customFile">Choose file</label>
+        </div>
+        <input type="text" placeholder="title" name="title">
+        <input type="text" placeholder="price" name="price">
+        <input type="submit">
 
+    </fieldset>
 
-    <input type="file" name="pic" >
-    <input type="text" placeholder="title" name="title">
-    <input type="text" placeholder="price" name="price">
-    <input type="submit">
 </form>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
-<script>
-    $('#hello').click(function () {
-        console.log('hello')
-    })
-</script>
 </body>
 </html>
